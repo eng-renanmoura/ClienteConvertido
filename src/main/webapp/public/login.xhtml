@@ -5,10 +5,15 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://java.sun.com/jsf/facelets"	
 	xmlns:p="http://primefaces.org/ui">
-	
-<ui:composition template="/_template.xhtml">
-	<ui:define name="corpo">
-		<h2>Login no sistema</h2>
+
+<ui:composition template="/public/template_initial.xhtml">
+    <ui:define name="nav_bar">
+        <ui:include src="/public/top_bar.xhtml"/>
+        <ui:include src="/public/search_bar.xhtml"/>
+    </ui:define>
+     
+    <ui:define name="container">
+      <h2>Login no sistema</h2>
 		<h:form id="formlogin">
 			<h:panelGrid columns="2" styleClass="campos">
 				<h:outputLabel value="Login:" for="login" />
@@ -21,6 +26,9 @@
 					action="#{loginBean.efetuaLogin}" />
 			</h:panelGrid>
 		</h:form>
-	</ui:define>
+    </ui:define>    
+    <ui:define name="title">        
+            Bem-vindo ao MyImage.com        
+    </ui:define>
 </ui:composition>
 </html>
