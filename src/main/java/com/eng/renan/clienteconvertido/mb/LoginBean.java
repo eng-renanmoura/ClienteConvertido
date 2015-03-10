@@ -14,11 +14,9 @@ import java.io.Serializable;
 import javax.inject.Inject;
 import com.eng.renan.clienteconvertido.dao.UsuarioDao;
 import com.eng.renan.clienteconvertido.modelo.Usuario;
-import javax.enterprise.context.SessionScoped;
-import javax.inject.Named;
+import javax.enterprise.inject.Model;
 
-@Named 
-@SessionScoped 
+@Model
 public class LoginBean implements Serializable {
 
 	private static final long serialVersionUID = 1410748902384124487L;
