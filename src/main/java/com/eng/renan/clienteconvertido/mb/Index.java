@@ -19,5 +19,15 @@ public class Index {
     public String getMessage(){
         return "mensagem";
     }
-
+    public String login(){
+          return "login.xhtml";
+     }
+    
+    public String index(){
+          return "index.xhtml";
+    }
+    
+     public String register(){
+          return "register.xhtml";
+    }
 }
