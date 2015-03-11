@@ -4,5 +4,7 @@
 	bean-discovery-mode="all">
 
 	<!-- Aqui vao as configuracoes do CDI -->
-
+	<interceptors>
+		<class>com.eng.renan.clienteconvertido.tx.TransactionInterceptor</class>
+	</interceptors>
 </beans>	

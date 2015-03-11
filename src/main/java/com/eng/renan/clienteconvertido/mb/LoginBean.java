@@ -50,5 +50,9 @@ public class LoginBean implements Serializable {
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
+        
+        public String register(){
+          return "register.xhtml";
+        }    
 	
 }
