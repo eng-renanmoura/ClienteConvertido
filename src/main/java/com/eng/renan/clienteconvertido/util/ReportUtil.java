@@ -9,6 +9,7 @@ package com.eng.renan.clienteconvertido.util;
  *
  * @author renanferreira
  */
+import com.eng.renan.clienteconvertido.jdbc.ConnectionFactory;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
@@ -35,14 +36,14 @@ import org.primefaces.model.StreamedContent;
  
 public class ReportUtil {
  
-    public static final String TEMPLATE = "/reports/users.jrxml";
+    public static final String TEMPLATE = "/reports/usuarios.jrxml";
      
     public StreamedContent geraRelatorio(HashMap parametrosRelatorio) throws Exception {
          
         StreamedContent arquivoRetorno = null;
  
         try {
-            Connection conexao = this.getConexao();                
+            Connection conexao = ConnectionFactory.getVendaConnection();
             InputStream reportStream = this.getClass().getResourceAsStream(TEMPLATE);
             JasperDesign jd = JRXmlLoader.load(reportStream);
             JasperReport jr = JasperCompileManager.compileReport(jd);
@@ -61,9 +62,7 @@ public class ReportUtil {
         } catch (JRException e) {
             e.printStackTrace();
             throw new Exception("Não foi possível gerar o relatório.", e);
-        } catch (FileNotFoundException e) {
-            throw new Exception("Arquivo do relatório nõo encontrado.", e);
-        }
+        } 
         return arquivoRetorno;
     }
  

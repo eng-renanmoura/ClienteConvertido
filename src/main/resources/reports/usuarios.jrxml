@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="java" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ca9b91dc-3b53-4b09-be51-9a860a3cda0b">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="65f065a6-ad69-4279-9509-df71ab6dd055">
 	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
 	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
 	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
@@ -30,35 +30,29 @@ from perfil p inner join usuario u on p.usuario_id = u.id;]]>
 	</background>
 	<title>
 		<band height="136" splitType="Stretch">
-			<image>
-				<reportElement x="0" y="0" width="164" height="126" uuid="81abf06f-eacb-4ec1-a4e1-fff19a921bbe"/>
-				<imageExpression><![CDATA["coffee.jpg"]]></imageExpression>
-			</image>
+			
 			<staticText>
-				<reportElement style="Title" x="270" y="0" width="263" height="62" uuid="81ada2f6-b4bc-4e9a-b65f-5a9f5e9d8010"/>
+				<reportElement style="Title" x="270" y="0" width="263" height="62" uuid="c673aa97-6d47-4d37-99f7-b9b24f655d0a"/>
 				<textElement verticalAlignment="Middle">
 					<font pdfFontName="Times-Roman"/>
 				</textElement>
 				<text><![CDATA[Coffee Title]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="SubTitle" x="303" y="62" width="196" height="22" uuid="468c8191-fc3d-4606-a100-1d5f612d37d5"/>
+				<reportElement style="SubTitle" x="303" y="62" width="196" height="22" uuid="976ff0f9-309f-4ddd-b2f3-d5d997e53254"/>
 				<textElement>
 					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
 				</textElement>
 				<text><![CDATA[Coffee SubTitle]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="172" y="94" width="383" height="42" uuid="90d3d3a4-4c02-4f73-8a34-bc52f13a2807"/>
+				<reportElement x="172" y="94" width="383" height="42" uuid="b9b8612c-d0c7-4eec-b984-40b8b26e12ae"/>
 				<textElement textAlignment="Right">
 					<font size="10"/>
 				</textElement>
 				<text><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor purus gravida arcu aliquam mattis. Donec et nulla libero, ut varius massa. Nulla sed turpis elit. Etiam aliquet mauris a ligula hendrerit in auctor leo lobortis.]]></text>
 			</staticText>
-			<image>
-				<reportElement x="633" y="-73" width="219" height="209" uuid="7d4542e7-7763-44dc-bedf-59cebfeef659"/>
-				<imageExpression><![CDATA["coffee_stain.png"]]></imageExpression>
-			</image>
+			
 		</band>
 	</title>
 	<pageHeader>
@@ -67,21 +61,21 @@ from perfil p inner join usuario u on p.usuario_id = u.id;]]>
 	<columnHeader>
 		<band height="16" splitType="Stretch">
 			<line>
-				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="4179ef2e-1f05-4362-9621-9ab555140a52"/>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="076a1e84-d241-422e-bcd7-21a94d566e6f"/>
 				<graphicElement>
 					<pen lineWidth="0.5" lineColor="#999999"/>
 				</graphicElement>
 			</line>
 			<staticText>
-				<reportElement style="Column header" x="0" y="0" width="267" height="15" forecolor="#736343" uuid="c02dadb5-98fc-461e-a4e1-aab4bb1245f8"/>
+				<reportElement style="Column header" x="0" y="0" width="267" height="15" forecolor="#736343" uuid="3bd759be-8bda-43d1-8a42-bfdeb80e4058"/>
 				<text><![CDATA[name]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="267" y="0" width="267" height="15" forecolor="#736343" uuid="6d151a78-f1ea-4bc7-b952-9bf9f0854127"/>
+				<reportElement style="Column header" x="267" y="0" width="267" height="15" forecolor="#736343" uuid="2c60e3e3-db1c-4d18-811f-88b696df40a5"/>
 				<text><![CDATA[email]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="534" y="0" width="267" height="15" forecolor="#736343" uuid="51e38b08-1126-4752-a8a3-cc6c55cf5858"/>
+				<reportElement style="Column header" x="534" y="0" width="267" height="15" forecolor="#736343" uuid="698d0f3d-db43-43c2-be73-f2cd0e0c5fdc"/>
 				<text><![CDATA[active]]></text>
 			</staticText>
 		</band>
@@ -89,17 +83,17 @@ from perfil p inner join usuario u on p.usuario_id = u.id;]]>
 	<detail>
 		<band height="15" splitType="Stretch">
 			<frame>
-				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="b12b806a-2413-49c4-8a1d-0ea82027ad58"/>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="7c8e2755-4a4f-4336-a6cc-12d5f53fecf4"/>
 				<textField isStretchWithOverflow="true">
-					<reportElement style="Detail" x="0" y="0" width="267" height="15" uuid="d5fa51fd-e9fa-4ff4-95b0-306f72ddcefc"/>
+					<reportElement style="Detail" x="0" y="0" width="267" height="15" uuid="b6414244-6c2a-4a14-9287-0e841f97f0e9"/>
 					<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
-					<reportElement style="Detail" x="267" y="0" width="267" height="15" uuid="4572169e-c4d5-435a-b09a-f5a99abc81f1"/>
+					<reportElement style="Detail" x="267" y="0" width="267" height="15" uuid="374bf601-e7a4-460a-9f26-15d510b21fd2"/>
 					<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
-					<reportElement style="Detail" x="534" y="0" width="267" height="15" uuid="27232560-7a49-4c81-a5b1-f03ebb872e67"/>
+					<reportElement style="Detail" x="534" y="0" width="267" height="15" uuid="34e7c98a-6c14-47e1-b501-0ec624abcf4d"/>
 					<textFieldExpression><![CDATA[$F{active}]]></textFieldExpression>
 				</textField>
 			</frame>
@@ -108,7 +102,7 @@ from perfil p inner join usuario u on p.usuario_id = u.id;]]>
 	<columnFooter>
 		<band height="6" splitType="Stretch">
 			<line>
-				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="649de2b8-be7c-42fd-b52d-e6f552fdb2b0"/>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="cc109e44-30e9-4509-9313-b4a44a58cf9f"/>
 				<graphicElement>
 					<pen lineWidth="0.5" lineColor="#999999"/>
 				</graphicElement>
@@ -118,23 +112,23 @@ from perfil p inner join usuario u on p.usuario_id = u.id;]]>
 	<pageFooter>
 		<band height="25" splitType="Stretch">
 			<frame>
-				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="dbfb3bce-9586-4ad4-b32a-34a06c9bb937"/>
+				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="3b2baf87-7d06-4ea8-b084-148503b6a759"/>
 				<textField evaluationTime="Report">
-					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="f4895873-6df7-4611-8a42-ef98a2f12d22"/>
+					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="bf0621a6-9ed0-492e-bc00-a89e12922211"/>
 					<textElement verticalAlignment="Middle">
 						<font size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="8b763efd-1da2-4ade-9650-500b7fe74ea2"/>
+					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="2c48f376-9404-405e-9c61-6e92d48584b0"/>
 					<textElement textAlignment="Right" verticalAlignment="Middle">
 						<font size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
 				</textField>
 				<textField pattern="EEEEE dd MMMMM yyyy">
-					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="02ce5fbe-50d3-4278-8f38-3c889f57470a"/>
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="4d914a83-5b70-4ba5-8ecb-447765eca221"/>
 					<textElement verticalAlignment="Middle">
 						<font size="10" isBold="false"/>
 					</textElement>

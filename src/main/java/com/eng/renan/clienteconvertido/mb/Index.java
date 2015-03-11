@@ -27,7 +27,11 @@ public class Index {
           return "index.xhtml";
     }
     
-     public String register(){
+    public String register(){
           return "register.xhtml";
+    }
+     
+    public String relatorio(){
+          return "relatorio.xhtml";
     }
 }
