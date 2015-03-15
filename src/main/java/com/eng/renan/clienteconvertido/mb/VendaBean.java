@@ -102,7 +102,7 @@ public class VendaBean implements Serializable{
 		item.setValorUnitario(produto.getPreco());
 		
 		venda.getItens().add(item);
-		item.setNotaFiscal(venda);
+		item.setVenda(venda);
 		
 		item = new Item();
 	}
