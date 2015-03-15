@@ -68,7 +68,7 @@ public class Item {
 		return venda;
 	}
 
-	public void setNotaFiscal(Venda venda) {
+	public void setVenda(Venda venda) {
 		this.venda = venda;
 	}
 	
