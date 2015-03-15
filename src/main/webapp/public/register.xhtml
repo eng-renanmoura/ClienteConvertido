@@ -2,78 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
     xmlns:ui="http://java.sun.com/jsf/facelets"
     xmlns:f="http://java.sun.com/jsf/core"
-    xmlns:h="http://java.sun.com/jsf/html"
-    xmlns:p="http://primefaces.org/ui">
+    xmlns:h="http://java.sun.com/jsf/html">
  
 <ui:composition template="/public/template_initial.xhtml">
     <ui:define name="nav_bar">
-        <ui:include src="top_bar.xhtml" />
+        <ui:include src="top_bar_register.xhtml" />
     </ui:define>
  
     <ui:define name="container">
-        <h:form id="form1">
-				<h:messages styleClass="erros"/>
-				<h2>
-					<h:outputText value="Novo Produto"
-						rendered="#{empty produtoBean.produto.id}" />
-					<h:outputText value="Editar Produto"
-						rendered="#{not empty produtoBean.produto.id}" />
-				</h2>
-				<fieldset>
-					<legend>Dados do Produto</legend>
-					<h:inputHidden id="hiddenId" value="#{produtoBean.produto.id}" />
-					<h:outputLabel value="Nome:" for="nome" />
-					<p:inputText id="nome" value="#{produtoBean.produto.nome}" validator="#{produtoBean.comecaComMaiuscula}"/> 
-
-					<h:outputLabel value="Descrição:" for="descricao" />
-					<p:editor id="descricao"
-						value="#{produtoBean.produto.descricao}" />
-
-					<h:outputLabel value="Preço:" for="preco" />
-					<p:inputText id="preco" value="#{produtoBean.produto.preco}" required="true"
-					requiredMessage="Preço Obrigatório" validatorMessage="O valor mínimo é 0,50">
-						<f:validateDoubleRange minimum="0.50"/>
-					</p:inputText>
-
-					<h:commandButton value="Gravar" action="#{produtoBean.grava}">
-						<f:ajax execute="@form" render=":form1 :form2" />
-					</h:commandButton>
-					<h:commandButton value="Cancelar">
-						<f:ajax render=":form1" />
-					</h:commandButton>
-				</fieldset>
-
-			</h:form>
-
-			<h2>Listagem de Produtos</h2>
-			<h:form id="form2">
-				<p:dataTable value="#{produtoBean.produtos}" var="produto"
-					rows="5" paginator="true">
-					<p:column headerText="Nome">
-					#{produto.nome}
-					</p:column>
-					<p:column headerText="Descrição">
-					#{produto.descricao}
-					</p:column>
-					<p:column headerText="Preço">
-					#{produto.preco}
-					</p:column>
-					<p:column headerText="Ações">
-						
-						<h:commandLink action="#{produtoBean.remove(produto)}"
-							value="Remover">
-							<f:ajax render=":form2" />
-						</h:commandLink>
-
-						<h:commandLink value="Alterar">
-							<f:setPropertyActionListener target="#{produtoBean.produto}"
-								value="#{produto}" />
-							<f:ajax render=":form1" />
-						</h:commandLink>
-
-					</p:column>
-				</p:dataTable>
-			</h:form>
+        <div class="row" style="padding-top: 60px;">
+            <ui:include src="form_register.xhtml" />
+        </div>
     </ui:define>
 </ui:composition>
 </html>

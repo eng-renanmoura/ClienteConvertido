@@ -60,8 +60,6 @@ public class ProdutoBean {
 		return produtos;
 	}
 	
-	
-	
 	public void setProdutos(List<Produto> produtos) {
 		this.produtos = produtos;
 	}
@@ -70,7 +68,6 @@ public class ProdutoBean {
 		dao.remove(produto);
 		this.produtos = dao.listaTodos(); 
 	}
-	
 	
 	public void comecaComMaiuscula(FacesContext fc, UIComponent component, Object value) 
 			throws ValidatorException{

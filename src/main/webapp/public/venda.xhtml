@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui">>
+ 
+<ui:composition template="/public/template_initial.xhtml">
+    <ui:define name="nav_bar">
+        <ui:include src="top_bar.xhtml" />
+    </ui:define>
+ 
+    <ui:define name="container">
+       <h:form>
+		<h:messages styleClass="erros" />
+		 <p:tabView>
+		   <p:tab title="Novo">
+			<p:fieldset legend="Dados da nota">				
+				<h:outputLabel value="CNPJ do Cliente:"/>
+				<p:inputMask value="#{notaFiscalBean.notaFiscal.cnpj}" mask="99.999.999/9999-99"/>
+				
+				<h:outputLabel value="Data:"/>
+				<p:calendar pattern="dd/MM/yyyy" value="#{notaFiscalBean.notaFiscal.data.time}"/>
+			</p:fieldset>
+			
+
+				<h:commandButton action="#{notaFiscalBean.avancar}" value="Avançar"/>
+			</p:tab>
+			
+			<p:tab title="Notas Cadastradas">
+				<p:dataTable value="#{notaFiscalBean.dataModel}" var="notaFiscal" paginator="true"
+				rows="5" lazy="true">
+					<p:column headerText="CNPJ">
+						#{notaFiscal.cnpj}
+					</p:column>
+					<p:column headerText="Data">
+						<h:outputText value="#{notaFiscal.data.time}">
+							<f:convertDateTime pattern="dd/MM/yyyy" timeZone="America/Sao_Paulo"/>
+						</h:outputText>
+					</p:column>
+				</p:dataTable>
+			</p:tab>		
+			</p:tabView>	
+		</h:form>
+    </ui:define>
+</ui:composition>
+</html>
