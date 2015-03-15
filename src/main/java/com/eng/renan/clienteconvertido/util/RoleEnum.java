@@ -9,14 +9,14 @@ package com.eng.renan.clienteconvertido.util;
  *
  * @author renanferreira
  */
-public enum Role {
+public enum RoleEnum {
      
     ROLE_ADMIN("ROLE_ADMIN"),
     ROLE_COMMON("ROLE_COMMON");
  
     private String value;
      
-    private Role(String value){
+    private RoleEnum(String value){
         this.value = value;
     }
  

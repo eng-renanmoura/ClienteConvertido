@@ -4,6 +4,9 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>com.eng.renan.clienteconvertido.modelo.Usuario</class>
     <class>com.eng.renan.clienteconvertido.modelo.Perfil</class>
+    <class>com.eng.renan.clienteconvertido.modelo.Produto</class>
+    <class>com.eng.renan.clienteconvertido.modelo.Item</class>
+    <class>com.eng.renan.clienteconvertido.modelo.Venda</class>
     <properties>
       <property name="eclipselink.canonicalmodel.subpackage" value="two"/>
       <property name="show_sql" value="true"/>

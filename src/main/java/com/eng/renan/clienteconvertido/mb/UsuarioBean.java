@@ -14,7 +14,7 @@ import com.eng.renan.clienteconvertido.modelo.Perfil;
 import com.eng.renan.clienteconvertido.modelo.Usuario;
 import com.eng.renan.clienteconvertido.util.GenerateValidation;
 import com.eng.renan.clienteconvertido.util.ManipulateDate;
-import com.eng.renan.clienteconvertido.util.Role;
+import com.eng.renan.clienteconvertido.util.RoleEnum;
 import java.io.Serializable;
 import java.util.Map;
  
@@ -40,7 +40,7 @@ public class UsuarioBean implements Serializable {
         
         //usuario.setSenha(GenerateMD5.generate(usuario.getSenha()));
         usuario.setValidation(GenerateValidation.keyValidation());
-        usuario.getPermissions().add(Role.ROLE_COMMON.getValue());
+        usuario.getPermissions().add(RoleEnum.ROLE_COMMON.getValue());
         usuario.setActive(false);
          
         perfil.setUsuario(usuario);
