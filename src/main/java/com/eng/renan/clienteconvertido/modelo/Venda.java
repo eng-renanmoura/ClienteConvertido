@@ -36,7 +36,7 @@ public class Venda {
 	@Temporal(TemporalType.DATE)
 	private Calendar data = Calendar.getInstance();
 
-	@OneToMany(cascade=CascadeType.PERSIST, mappedBy="notaFiscal")
+	@OneToMany(cascade=CascadeType.PERSIST, mappedBy="venda")
 	private List<Item> itens = new ArrayList<Item>();
 
 	public Long getId() {
