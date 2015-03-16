@@ -20,18 +20,20 @@ import javax.inject.Named;
 @SessionScoped
 public class UsuarioLogadoBean implements Serializable {
 
+        private static final long serialVersionUID = 1L;
+    
 	private Usuario usuario;
 
 	public void loga(Usuario usuario) {
 		this.usuario = usuario;
 	}
+
+        public void desloga() {
+		this.usuario = null;
+	}
 	
 	public boolean isLogado() {
 		return usuario != null;
-	}
-	
-	public void desloga() {
-		this.usuario = null;
 	}
 	
 	public Usuario getUsuario() {

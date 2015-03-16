@@ -30,6 +30,8 @@ import org.hibernate.annotations.CascadeType;
 @SequenceGenerator(name = "seq", sequenceName = "seq_user", allocationSize = 1, initialValue = 1)
 public class Usuario implements Serializable{
      
+    private static final long serialVersionUID = 1L;
+    
     @Id
     @GeneratedValue(generator="seq")
     private Long id;
