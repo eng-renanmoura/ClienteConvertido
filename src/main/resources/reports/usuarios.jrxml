@@ -11,14 +11,14 @@
 		</conditionalStyle>
 	</style>
 	<queryString language="SQL">
-		<![CDATA[SELECT P.FIRStname ||''|| p.lastname as name, p.email,
+		<![CDATA[SELECT concat(p.firstname,' ',p.lastname) as name, p.email,
 case u.active
 when false then 'NÃO ATIVO'
 when true then 'ATIVO'
 end as active
 from perfil p inner join usuario u on p.usuario_id = u.id;]]>
 	</queryString>
-	<field name="name" class="java.lang.Long"/>
+	<field name="name" class="java.lang.String"/>
 	<field name="email" class="java.lang.String">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>

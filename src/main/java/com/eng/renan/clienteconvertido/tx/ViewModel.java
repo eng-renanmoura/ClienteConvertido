@@ -1,4 +1,4 @@
-package br.com.caelum.notasfiscais.tx;
+package com.eng.renan.clienteconvertido.tx;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

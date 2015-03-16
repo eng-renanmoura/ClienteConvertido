@@ -9,18 +9,16 @@ package com.eng.renan.clienteconvertido.mb;
  *
  * @author renanferreira
  */
-import java.io.Serializable;
-
 
 import com.eng.renan.clienteconvertido.modelo.Usuario;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
+import java.io.Serializable;
 
-@ManagedBean
-@RequestScoped
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Named;
+
+@Named
+@SessionScoped
 public class UsuarioLogadoBean implements Serializable {
-
-	private static final long serialVersionUID = 7816010528258775566L;
 
 	private Usuario usuario;
 
@@ -29,7 +27,7 @@ public class UsuarioLogadoBean implements Serializable {
 	}
 	
 	public boolean isLogado() {
-		return this.usuario != null;
+		return usuario != null;
 	}
 	
 	public void desloga() {

@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+       xmlns:p="http://primefaces.org/ui">
  
 <body>
     <div class="jumbotron" style="padding-bottom: 12px; padding-top: 32px;">
@@ -11,13 +12,17 @@
                 <div class="col-md-3">
                 </div>
                 <div class="col-md-6">
+
                     <h:form>
-                        <div class="input-group">
-                            <h:inputText value="" styleClass="form-control" pt:placeholder="Digite aqui para buscar por imagens"/>
-                            <span class="input-group-btn">
-                                <h:commandButton action="#" value="buscar" styleClass="btn btn-default"/>
-                            </span>
-                        </div>
+                        <p:menubar rendered="#{not empty usuarioLogadoBean.usuario}">
+                            <p:submenu label="Cadastro">
+				<p:menuitem value="Produto" url="produto.xhtml"/>
+                                <p:menuitem value="Vendedor" url="produto.xhtml"/>
+                                <p:menuitem value="Usuario" url="register.xhtml"/>
+                            </p:submenu>                  
+                            <p:menuitem value="Venda" url="venda.xhtml"/>  
+                            <p:menuitem value="Relatório" url="relatorio.xhtml"/>  
+                        </p:menubar>
                     </h:form>
                 </div>
                 <div class="col-md-3">

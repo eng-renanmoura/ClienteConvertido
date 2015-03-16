@@ -51,4 +51,10 @@ public class LoginBean implements Serializable {
 		this.usuario = usuario;
 	}
         
+        public String sair(){
+		usuarioLogado.desloga();
+		this.usuario = new Usuario();
+		return "login?faces-redirect=true";
+	}
+        
 }
