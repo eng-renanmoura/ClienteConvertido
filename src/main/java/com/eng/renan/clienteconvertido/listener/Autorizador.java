@@ -25,10 +25,6 @@ public class Autorizador implements PhaseListener {
 	 */
 	private static final long serialVersionUID = 3863062805588826397L;
         
-	@Inject
-	UsuarioLogadoBean usuarioLogado;
-	
-	
 	@Override
 	public void afterPhase(PhaseEvent event) {
 		FacesContext context = event.getFacesContext();
@@ -40,8 +36,10 @@ public class Autorizador implements PhaseListener {
 		if("/public/login.xhtml".equals(context.getViewRoot().getViewId())){
 			return;
 		}
+     
+                UsuarioLogadoBean usuarioLogadoBean = context.getApplication().evaluateExpressionGet(context, "#{usuarioLogadoBean}", UsuarioLogadoBean.class);
 		
-		if(!usuarioLogado.isLogado()){
+		if(!usuarioLogadoBean.isLogado()){
 			NavigationHandler handler = context.getApplication().getNavigationHandler();
 			
 			handler.handleNavigation(context, null, "/public/login?faces-redirect=true");

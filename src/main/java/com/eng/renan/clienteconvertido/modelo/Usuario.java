@@ -18,6 +18,7 @@ import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.Id;
@@ -28,12 +29,10 @@ import org.hibernate.annotations.CascadeType;
  
 @Entity
 @SequenceGenerator(name = "seq", sequenceName = "seq_user", allocationSize = 1, initialValue = 1)
-public class Usuario implements Serializable{
-     
-    private static final long serialVersionUID = 1L;
+public class Usuario implements Serializable{  
     
     @Id
-    @GeneratedValue(generator="seq")
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     private String login;
     private String senha;    
