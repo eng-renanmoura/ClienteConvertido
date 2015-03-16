@@ -82,10 +82,10 @@ public class ProdutoDao implements Serializable{
                 EntityManager  em = new JPAUtil().getEntityManager();
                 em.getTransaction().begin();
                 
-		CriteriaQuery<Produto> query = manager.getCriteriaBuilder().createQuery(Produto.class);
+		CriteriaQuery<Produto> query = em.getCriteriaBuilder().createQuery(Produto.class);
 		query.select(query.from(Produto.class));
 
-		List<Produto> lista = manager.createQuery(query).getResultList();
+		List<Produto> lista = em.createQuery(query).getResultList();
 
                 em.close();
                 
