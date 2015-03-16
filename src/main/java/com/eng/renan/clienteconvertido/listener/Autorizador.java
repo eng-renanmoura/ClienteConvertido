@@ -25,15 +25,15 @@ public class Autorizador implements PhaseListener {
 	 */
 	private static final long serialVersionUID = 3863062805588826397L;
         
-	
-	UsuarioLogadoBean usuarioLogado = new UsuarioLogadoBean();
+	@Inject
+	UsuarioLogadoBean usuarioLogado;
 	
 	
 	@Override
 	public void afterPhase(PhaseEvent event) {
 		FacesContext context = event.getFacesContext();
 		
-		if("/public/index.xhtml".equals(context.getViewRoot().getViewId())){
+		if("/public/index.xhtml".equals(context.getViewRoot().getViewId())){                   
 			return;
 		}
 		
