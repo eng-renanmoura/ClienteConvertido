@@ -12,7 +12,8 @@
     </ui:define>
      
     <ui:define name="container">
-      <h2>Login no sistema</h2>
+        <div class="row" style="padding-top:120px;">
+            <h2>Login no sistema</h2>
 		<h:form id="formlogin">
 			<h:panelGrid columns="2" styleClass="campos">
 				<h:outputLabel value="Login:" for="login" />
@@ -25,9 +26,10 @@
 					action="#{loginBean.efetuaLogin}" />
 			</h:panelGrid>
 		</h:form>
-    </ui:define>    
+        </div>
+    </ui:define>  
     <ui:define name="title">        
-            Bem-vindo ao MyImage.com        
+            Bem-vindo      
     </ui:define>
 </ui:composition>
 </html>

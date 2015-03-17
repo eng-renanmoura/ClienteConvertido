@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui">
+ 
+<ui:composition template="/public/template_initial.xhtml">
+    <ui:define name="nav_bar">
+        <ui:include src="top_bar.xhtml" />
+    </ui:define>
+ 
+    <ui:define name="container">
+        <div class="row" style="padding-top:120px;">
+                        <h:form id="form1">
+				<h:messages styleClass="erros"/>
+				<h2>
+					<h:outputText value="Novo Vendedor"
+						rendered="#{empty vendedorBean.vendedor.id}" />
+					<h:outputText value="Editar Vendedor"
+						rendered="#{not empty vendedorBean.vendedor.id}" />
+				</h2>
+				<fieldset>
+					<legend>Dados do Vendedor</legend>
+					<h:inputHidden id="hiddenId" value="#{vendedorBean.vendedor.id}" />
+					<h:outputLabel value="Nome:" for="nome" />
+					<p:inputText id="nome" value="#{vendedorBean.vendedor.nome}" validator="#{vendedorBean.comecaComMaiuscula}"/> 
+
+                                        <h:outputLabel value="Loja:" />
+                                        <h:selectOneMenu value="#{vendedorBean.idLoja}">
+					<f:selectItems value="#{lojaBean.lojas}" var="loja"
+						itemValue="#{loja.id}" itemLabel="#{loja.nome}" />
+                                        </h:selectOneMenu>
+
+					<h:commandButton value="Gravar" action="#{vendedorBean.grava}">
+						<f:ajax execute="@form" render=":form1 :form2" />
+					</h:commandButton>
+					<h:commandButton value="Cancelar">
+						<f:ajax render=":form1" />
+					</h:commandButton>
+				</fieldset>
+
+			</h:form>
+
+			<h2>Listagem de Vendedores</h2>
+			<h:form id="form2">
+				<p:dataTable value="#{vendedorBean.vendedores}" var="vendedor"
+					rows="5" paginator="true">
+					<p:column headerText="Nome">
+					#{vendedor.nome}
+					</p:column>
+					<p:column headerText="Loja">
+					#{vendedor.loja.nome}
+					</p:column>
+					<p:column headerText="Ações">
+						
+						<h:commandLink action="#{vendedorBean.remove(vendedor)}"
+							value="Remover">
+							<f:ajax render=":form2" />
+						</h:commandLink>
+
+						<h:commandLink value="Alterar">
+							<f:setPropertyActionListener target="#{vendedorBean.vendedor}"
+								value="#{vendedor}" />
+							<f:ajax render=":form1" />
+						</h:commandLink>
+
+					</p:column>
+				</p:dataTable>
+			</h:form>
+        </div>
+    </ui:define>
+</ui:composition>
+</html>

@@ -24,7 +24,7 @@ public class Vendedor {
     private String nome;
     
     @ManyToOne
-    private Produto produto;
+    private Loja loja;
 
     public Long getId() {
         return id;
@@ -42,12 +42,12 @@ public class Vendedor {
         this.nome = nome;
     }
 
-    public Produto getProduto() {
-        return produto;
+    public Loja getLoja() {
+        return loja;
     }
 
-    public void setProduto(Produto produto) {
-        this.produto = produto;
+    public void setLoja(Loja loja) {
+        this.loja = loja;
     }
-    
+
 }
