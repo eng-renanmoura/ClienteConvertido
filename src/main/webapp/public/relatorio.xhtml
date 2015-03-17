@@ -19,13 +19,14 @@ and open the template in the editor.
  
         <ui:define name="container">
             <div class="row">
-                <div class="container" style="padding-top: 50px;">
+                <div class="container" style="padding-top:120px;">
                     <h:panelGrid columns="4">
                         <h:form id="impressao">
                             <h:commandLink>
                                 <p:fileDownload value="#{report.arquivoRetorno}" />
                                 <h:graphicImage library="images" name="pdf.png"
                                     title="Imprimir PDF" />
+                                Relatório de Usuários
                             </h:commandLink>                                                
                         </h:form>
                         <h:messages />

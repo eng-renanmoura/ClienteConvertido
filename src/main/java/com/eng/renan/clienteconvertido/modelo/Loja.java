@@ -9,22 +9,19 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 /**
  *
  * @author renanferreira
  */
 @Entity
-public class Vendedor {
-    @Id
+public class Loja {
+    @Id 
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     
     private String nome;
-    
-    @ManyToOne
-    private Produto produto;
+    private String descricao;
 
     public Long getId() {
         return id;
@@ -42,12 +39,12 @@ public class Vendedor {
         this.nome = nome;
     }
 
-    public Produto getProduto() {
-        return produto;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setProduto(Produto produto) {
-        this.produto = produto;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
     
 }

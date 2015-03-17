@@ -36,7 +36,31 @@
                    
                 </div>
             </div>
+            
+             <div class="row" style="padding-top: 0px;">
+                <div >
+                </div>
+                <div class="col-md-16">
+
+                    <h:form>
+                        <p:menubar rendered="#{not empty usuarioLogadoBean.usuario}">
+                            <p:submenu label="Cadastro">
+				<p:menuitem value="Produto" url="produto.xhtml"/>
+                                <p:menuitem value="Loja" url="loja.xhtml"/>
+                                <p:menuitem value="Vendedor" url="produto.xhtml"/>
+                                <p:menuitem value="Usuario" url="register.xhtml"/>
+                            </p:submenu>                  
+                            <p:menuitem value="Venda" url="venda.xhtml"/>  
+                            <p:menuitem value="Relatório" url="relatorio.xhtml"/>  
+                        </p:menubar>
+                    </h:form>
+                </div>
+                <div class="col-md-3">
+                </div>            
+            </div>
         </div>
+        
+           
     </div>
 </body>
 </html>

@@ -15,9 +15,7 @@ and open the template in the editor.
  
 <body>
     <div class="col-md-8">
-        <h1>Crie sua conta do MyImage.com!</h1>
-        <p>Criando sua conta no MyImage.com você poderá publicar suas
-            imagens para o mundo.</p>
+        <h4>Cadastro de usuário</h4>
         <br />
         <h:form class="form-horizontal" role="form">
             <div class="form-group">
@@ -182,6 +180,7 @@ and open the template in the editor.
  
                 </div>
             </div>
+            <!--
             <div class="form-group">
                 <div class="col-sm-offset-3 col-sm-10">
                     <div class="checkbox">
@@ -198,20 +197,15 @@ and open the template in the editor.
                     <h:message id="m_terms" for="terms" style="color:#D74937;" />
                 </div>
             </div>
+            -->
             <div class="form-group">
                 <div class="col-sm-offset-3 col-sm-10">
-                    <h:commandButton action="#{usuarioBean.save()}" value="Próxima etapa"
+                    <h:commandButton action="#{usuarioBean.save()}" value="Salvar"
                         styleClass="btn btn-default" />
                 </div>
             </div>
-            <div class="form-group">
-                <div class="col-sm-offset-3 col-sm-10">
-                    <span> <h:outputLink value="#">Saiba mais</h:outputLink>
-                        sobre o motivo de pedirmos essas informações.
-                    </span>
-                </div>
-            </div>
         </h:form>
+        
     </div>
 </body>
 </html>

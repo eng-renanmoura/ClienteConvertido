@@ -7,6 +7,8 @@
     <class>com.eng.renan.clienteconvertido.modelo.Produto</class>
     <class>com.eng.renan.clienteconvertido.modelo.Item</class>
     <class>com.eng.renan.clienteconvertido.modelo.Venda</class>
+    <class>com.eng.renan.clienteconvertido.modelo.Vendedor</class>
+    <class>com.eng.renan.clienteconvertido.modelo.Loja</class>
     <properties>
       <property name="eclipselink.canonicalmodel.subpackage" value="two"/>
       <property name="show_sql" value="true"/>
